@@ -1,0 +1,68 @@
+/**
+* Template Name: NiceAdmin
+* Updated: Sep 18 2023 with Bootstrap v5.3.2
+* Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+.back-logn{ background: radial-gradient(circle, rgba(249,249,249,1) 24%, rgba(223,247,225,1) 47%, rgba(255,209,175,1) 94%);
+}
+
+.ban{width: 100%; height: 250px; margin: auto; padding: 15px ; clear: both; margin: 20px 0px; background-color: #fff; overflow: hidden;}
+.right-align{text-align: right; margin-right: 0; float: right;}
+/*.form-select{background: rgba(255, 255, 255, 0.8);}*/
+.h-50{ height: 50px !important;}
+.light-txt{ font-size: 14px !important; color:#939393;}
+.dark-lght span{ color: #202020;}
+.dark-lght span:hover{ color: #f37022;}
+.user-bg{ position: relative;}
+.user-profile{ position: absolute; bottom: -15px; left:25px; z-index: 9; background: rgba(255, 255, 255, 1); }
+.prof-pic{border: 5px solid #fff;}
+.prf-name{ padding: 5px; }
+.opt-bg{ background-color: #fff; padding: 2px;  }
+.opt-icn{ padding-right:10px ; padding-left: 10px; color: #2c2c2c !important;}
+.modal-header, .modal-footer{background: linear-gradient(297deg, rgba(223,247,225,0.7679446778711485) 5%, rgba(255,255,255,0.969625350140056) 48%, rgba(255,209,175,0.7175245098039216) 96%);}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color:#f85532;
+}
+
+.opt-txt{ font-size: 12px !important;}
+.opt-txt:hover{color: #202020 !important;}
+.header .search-bar{ min-width: 240px !important;}
+.nav-link{ color: #202020 !important;}
+
+@media (max-width: 767px) {
+    .user-profile {
+        bottom: -190px; left:25%; z-index:9;
+
+   
+    }
+    .mb-mrgn{ margin-top: 250px; }
+   .margin-topm { margin-top: 150px; width: 300px; box-shadow: -24px 21px 16px -17px rgba(0,0,0,0.45);
+    -webkit-box-shadow: -24px 21px 16px -17px rgba(0,0,0,0.45);
+    -moz-box-shadow: -24px 21px 16px -17px rgba(0,0,0,0.45); background-color: #fff; padding-left: 15px;}
+    .btn-mob{ padding: 2px 5px; font-size: 12px;
+   }
+
+    .nav-icon{ margin-right: 5px !important;}
+    .navbar-toggler{ padding: 5px ; border: 0;}
+    .navbar-toggler-icon{ width: 25px;}
+    .mob-txt{ font-size: 12px;}
+    .mob-a-icn{ font-size: 18px !important;}
+
+    .navbar>.wdthmob{flex-wrap:nowrap;}
+    .navbar-toggler:focus{ outline: 0 !important; border: 0; box-shadow: none !important;}
+
+    .margin-topmuser{margin-top: 210px; width: 300px; box-shadow: -24px 21px 16px -17px rgba(0,0,0,0.45);
+        -webkit-box-shadow: -24px 21px 16px -17px rgba(0,0,0,0.45);
+        -moz-box-shadow: -24px 21px 16px -17px rgba(0,0,0,0.45); background-color: #fff; padding-left: 15px;}
+  
+  }
+  
+
+
