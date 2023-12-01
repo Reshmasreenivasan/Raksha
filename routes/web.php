@@ -16,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () { return view('login');});
 Route::get('signup', function () { return view('signup');});
 Route::get('dashboard', function () { return view('dashboard');});
+Route::get('home', function () { return view('home');});
 Route::get('profile', function () { return view('profile');});
+Route::get('timeline', function () { return view('timeline');});
+Route::get('topics', function () { return view('topics');});
