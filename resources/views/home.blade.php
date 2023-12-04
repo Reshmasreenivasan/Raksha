@@ -139,7 +139,7 @@
 
         <li class="nav-item dropdown">
 
-          <a href="user-login.html"><button type="button" class="btn btn-success btn-mob">Login</button></a>
+          <button onclick="window.location.href='{{ url('login') }}'" type="button" class="btn btn-success btn-mob">Login</button>
 
           
 
