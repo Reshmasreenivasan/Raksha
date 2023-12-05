@@ -147,7 +147,7 @@
 
         <li class="nav-item ps-2 pe-3">
 
-          <a href="user-register.html"><button type="button" class="btn btn-outline-warning btn-mob">Register</button></a>
+          <button onclick="window.location.href='{{ url('signup') }}'" type="button" class="btn btn-outline-warning btn-mob">Register</button>
 
           
 

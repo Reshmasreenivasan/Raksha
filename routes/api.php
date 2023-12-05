@@ -22,8 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //Admin Panel APIs
 
-Route::post('/adminLogin', [AdminController::class, 'loginCheck']);
-Route::post('/adminRegister', [AdminController::class, 'Register']);
+Route::get('adminLogin', [AdminController::class, 'loginCheck']);
+Route::get('/adminRegister', [AdminController::class, 'Register']);
 Route::post('/adminProfile/{user_id}', [AdminController::class, 'updateProfile']);
 Route::post('/adminProfileImage/{user_id}', [AdminController::class, 'UpdateProfilePic']);
 Route::delete('/adminProfileImage/{user_id}', [AdminController::class, 'RemoveProfilePic']);

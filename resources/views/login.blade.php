@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8"  >
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Raksha</title>
@@ -10,6 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
+  <meta href="{{url('/favicon.ico')}}">
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -33,7 +34,7 @@
   <link href="assets/css/custom-style1.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: NiceAdmin
+  * Template Name: NiceAdmin-
   * Updated: Sep 18 2023 with Bootstrap v5.3.2
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
   * Author: BootstrapMade.com
@@ -68,37 +69,76 @@
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
-
-                    <div class="col-12">
-                      <label for="yourUsername" class="form-label">Username</label>
-                      <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please enter your username.</div>
-                      </div>
+                  <form action="{{url('adminLogin')}}" method="post" class="row g-3 needs-validation"
+                  novalidate>
+                  @csrf
+                  <div class="input-group has-validation">
+                  <label for="login" class="form-label">Username</label>
+                    <div class="input-group input-group-merge">
+                        <input id="login" type="login"required=""
+                               name ="login"
+                               class="form-control "
+                               placeholder="Enter Your Email Id">
+                        <!-- <div class="input-group-prepend"> -->
+                            <!-- <div class="input-group-text"> -->
+                            <!-- <span class="far fa-envelope"> </span> -->
+                                @if ($errors->has('email'))
+                                <span class="far fa-envelope">{{ $errors->first('email') }}</span>
+                                  @endif
+                               
+                            <!-- </div> -->
+                        <!-- </div> -->
                     </div>
-
-                    <div class="col-12">
-                      <label for="yourPassword" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Please enter your password!</div>
+                </div>
+                <div class="form-group">
+                    <label class="text-label"
+                           for="password_2">Password:</label>
+                    <div class="input-group input-group-merge">
+                        <input id="password"
+                               type="password"
+                               required=""
+                               name="password"
+                               class="form-control form-control-prepended"
+                               placeholder="Enter your password">
+                        <!-- <div class="input-group-prepend"> -->
+                            <!-- <div class="input-group-text"> -->
+                                <!-- <span class="fa fa-key"> -->
+                                @if ($errors->has('password'))
+                                      <span class="text-danger">{{ $errors->first('password') }}</span>
+                                  @endif
+                                <!-- </span> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
                     </div>
+                </div>
 
-                    <div class="col-12">
+                <div class="col-12">
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
                         <label class="form-check-label" for="rememberMe">Remember me</label>
                       </div>
                     </div>
-                    <div class="col-12">
-                      <a href="admin.html" class="btn btn-success w-100">Login</a>
-                      <!--<button class="btn btn-success w-100" type="submit">Login</button>-->
+
+                <div class="form-group">
+                    <button class="btn btn-success w-100"
+                            type="submit">Login</button>
+                </div>
+                <!-- <div class="form-group text-center">
+                    <div class="custom-control custom-checkbox text-center">
+                        <input type="checkbox"
+                               class="custom-control-input"
+                               checked=""
+                               id="remember">
+                        <label class="custom-control-label"
+                               for="remember">Remember me for 30 days</label>
                     </div>
-                    <div class="col-12">
-                      <p class="small mb-0">Don't have account? <a href="user-register.html">Create an account</a></p>
-                    </div>
-                  </form>
+                </div> -->
+                <div class="form-group text-center">
+                    <a href="{{url('reset_password')}}">Forgot password?</a> 
+                    <!-- <p class="mt-2"> Don't have an account? <a class="text-body text-underline"
+                       href="signup.html">Sign up!</a></p> -->
+                </div>
+            </form>
 
                 </div>
               </div>
